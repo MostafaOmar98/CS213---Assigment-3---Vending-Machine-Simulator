@@ -57,6 +57,12 @@ public:
      */
     double getItemCount(const std::string &name) const;
 
+    void setItemPrice(const std::string &name, double price);
+    /*
+     * operator +=
+     * ------------
+     * adds item to stock
+     */
     Stock operator+= (Item tempItem);
     // default destructor
     virtual ~Stock();

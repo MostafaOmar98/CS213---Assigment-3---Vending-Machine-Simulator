@@ -74,6 +74,17 @@ Stock Stock::operator+= (Item tempItem)
     addItem(tempItem.getName());
 }
 
+void Stock::setItemPrice(const std::string &name, double price)
+{
+    for (int i = 0; i < mItem.size(); ++i)
+    {
+        if (mItem[i]->getName() == name)
+        {
+            mItem[i]->setPrice(price);
+        }
+    }
+}
+
 Stock::~Stock() {
     for (int i = 0; i < mItem.size(); ++i)
     {
