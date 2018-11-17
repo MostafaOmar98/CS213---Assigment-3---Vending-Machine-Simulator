@@ -60,6 +60,11 @@ void VendingMachine::runVendingMachine()
             std::cin >> choice;
             if (choice == 1)
                 printMenu();
+            else if (choice == 0)
+            {
+                std::cout << "\nTerminating...\n"
+                exit(0);
+            }
         }
         while(choice != 0 && choice != 1);
 

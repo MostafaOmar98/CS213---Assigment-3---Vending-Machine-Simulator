@@ -64,7 +64,7 @@ std::vector<int> Money::giveChange(double Change)
         resultChange.push_back(tempCount);
     }
     std::reverse(resultChange.begin(), resultChange.end());
-    if (doubleCompare(Change, 0) != 0)
+    if (doubleCompare(Change, 0.5) == -1)
     {
         std::cout << "\nNo enough change\n"
                 "Terminating...\n";
