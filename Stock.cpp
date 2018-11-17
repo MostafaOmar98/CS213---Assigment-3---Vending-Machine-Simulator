@@ -68,6 +68,12 @@ double Stock::getItemCount(const std::string &name) const
     return 0;
 
 }
+
+Stock Stock::operator+= (Item tempItem)
+{
+    addItem(tempItem.getName());
+}
+
 Stock::~Stock() {
     for (int i = 0; i < mItem.size(); ++i)
     {

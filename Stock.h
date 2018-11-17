@@ -57,6 +57,7 @@ public:
      */
     double getItemCount(const std::string &name) const;
 
+    Stock operator+= (Item tempItem);
     // default destructor
     virtual ~Stock();
 };
